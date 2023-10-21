@@ -4,6 +4,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.TestBase;
 
@@ -11,20 +12,15 @@ public class LoginPage extends TestBase{
 	
 	
 
-	public LoginPage(Properties prop) {
-		super(prop);
-		// TODO Auto-generated constructor stub
-	}
-
 	//Page Factory - OR
 	@FindBy(name="email")
-	WebElement emailDetails;
+	WebElement emaiLogin;
 	
 	@FindBy(name="password")
-	WebElement password;
+	WebElement passwordLogin;
 	
-	@FindBy(xpath="password")
-	WebElement password;
+	@FindBy(xpath="//div[contains(text(),'Login')]")
+	WebElement loginBtn;
 	
 	//button[]
 	
@@ -34,5 +30,21 @@ public class LoginPage extends TestBase{
 	
 	//Copy full xpath
 	// /html/body/div[1]/div/div/form/div/div[3]
+	
+	
+	public LoginPage() 
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	
+	public String validateLoginPageTitle()
+	{
+		
+		return driver.getTitle();
+	}
+	
+	
 	
 }
