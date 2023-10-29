@@ -8,7 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.TestBase;
 
-public class LoginPage extends TestBase{
+public class LoginPage extends TestBase
+{
 	
 	
 
@@ -22,29 +23,30 @@ public class LoginPage extends TestBase{
 	@FindBy(xpath="//div[contains(text(),'Login')]")
 	WebElement loginBtn;
 	
-	//button[]
-	
-	//copy xpath
-	//*[@id="ui"]/div/div/form/div/div[3]
 	
 	
-	//Copy full xpath
-	// /html/body/div[1]/div/div/form/div/div[3]
-	
-	
+	//Initializing the Page Object
 	public LoginPage() 
 	{
+		super(prop);
 		PageFactory.initElements(driver, this);
 	}
 	
 	
-	
+	//Actions
 	public String validateLoginPageTitle()
 	{
-		
 		return driver.getTitle();
 	}
 	
 	
+	
+	public void login(String lgn,String pwd)
+	{
+		
+	
+	}
+	
+		
 	
 }

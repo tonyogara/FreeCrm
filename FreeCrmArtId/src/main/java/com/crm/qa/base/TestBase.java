@@ -14,7 +14,7 @@ import com.crm.qa.utilities.TestUtil;
 public class TestBase {
 	//Global variables
 	public static WebDriver driver;
-	static Properties prop;
+	public static Properties prop;
 	
 	
 	public TestBase(Properties prop){
