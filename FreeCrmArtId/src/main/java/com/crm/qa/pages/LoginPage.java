@@ -12,6 +12,7 @@ public class LoginPage extends TestBase
 {
 	
 	
+	
 
 	//Page Factory - OR
 	@FindBy(name="email")
@@ -41,10 +42,14 @@ public class LoginPage extends TestBase
 	
 	
 	
-	public void login(String lgn,String pwd)
+	public HomePage login(String lgn,String pwd)
 	{
+		emaiLogin.sendKeys(lgn);
+		passwordLogin.sendKeys(pwd);
+		loginBtn.click();
 		
-	
+		return new HomePage();
+		
 	}
 	
 		
