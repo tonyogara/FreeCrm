@@ -24,6 +24,9 @@ public class LoginPage extends TestBase
 	@FindBy(xpath="//div[contains(text(),'Login')]")
 	WebElement loginBtn;
 	
+	//crmLogo
+@FindBy(xpath="//body/div[@id='ui']/div[1]/div[2]/div[1]/div[1]")
+	WebElement crmLogo
 	
 	
 	//Initializing the Page Object
