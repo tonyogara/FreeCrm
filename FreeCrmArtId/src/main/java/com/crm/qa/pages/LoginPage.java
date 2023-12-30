@@ -25,7 +25,7 @@ public class LoginPage extends TestBase
 	WebElement loginBtn;
 	
 	//crmLogo
-@FindBy(xpath="//body/div[@id='ui']/div[1]/div[2]/div[1]/div[1]")
+	@FindBy(xpath="//body/div[@id='ui']/div[1]/div[2]/div[1]/div[1]")
 	WebElement crmLogo
 	
 	
@@ -56,5 +56,11 @@ public class LoginPage extends TestBase
 	}
 	
 		
+
+	public boolean validateCRMImage()
+	{
+		return crmLogo.isDisplayed();
+
+	}
 	
 }
