@@ -11,21 +11,30 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.crm.qa.utilities.TestUtil;
 
+
+
+
+
 public class TestBase {
 	//Global variables
 	public static WebDriver driver;
-	public static Properties prop;
+	public static Properties prop = new Properties();
+	public static String browserName;
 	
 	
 	public TestBase(Properties prop){
 		
 		//Read my properties
 		try {
-			prop = new Properties();
+			//prop = new Properties();
 			FileInputStream ip = new FileInputStream(
-					System.getProperty("/Users/tony/Documents/Learning/FreeCrm/FreeCrmArtId"
-							+ "/src/main/java/com/crm/qa/config.properties"));
+				"/Users/tony/Documents/Learning/FreeCrm/FreeCrmArtId"
+							+ "/src/main/java/com/crm/qa/config/config.properties");
+			
+			
 			prop.load(ip);
+			String browserName = prop.getProperty("browser");
+			System.out.println(browserName);
 		}catch (FileNotFoundException e){
 				e.printStackTrace();
 			} catch (IOException e){
@@ -35,19 +44,22 @@ public class TestBase {
 	
 	
 
-
 	public static void initialization()
 	{
+		System.out.println("one");
 		String browserName = prop.getProperty("browser");
-		
+		System.out.println(browserName);
+		System.out.println("Before if");
 		if(browserName.equals("chrome"))
 		{
-			System.getProperty("webdriver.chrome.driver", "location where the chromedriver is saved to");
+			//prop.getProperty("browser");
+			//prop.getProperty("webdriver.chrome.driver", "location where the chromedriver is saved to");
+			System.out.println("Successfully identified chrome");
 			driver = new ChromeDriver();
 		}
 		else if(browserName.equals("firefox"))
 		{
-			System.getProperty("webdriver.gecko.driver", "location where the chromedriver is saved to");
+			//System.getProperty("webdriver.gecko.driver", "location where the chromedriver is saved to");
 			driver = new ChromeDriver();
 		}
 		
