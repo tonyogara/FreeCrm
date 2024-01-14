@@ -60,13 +60,7 @@ public class LoginPageTest extends TestBase{
 	}
 	
 	
-	/*
-	Given I launch the website
-	When I enter my login
-	And I enter my password
-	And I select the  login button
-	Then the Hole page is displayed
-	*/
+	
 	
 	
 	
