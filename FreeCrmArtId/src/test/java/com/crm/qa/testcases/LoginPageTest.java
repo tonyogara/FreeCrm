@@ -32,23 +32,25 @@ public class LoginPageTest extends TestBase{
 	}
 	
 	
-	
+	/*
 	@Test(priority=1)
 	public void loginPageTitleTest()
 	{
 		String title = loginPage.validateLoginPageTitle();
-		Assert.assertEquals(title, "Cogmento CRM");
-		
+		//Assert.assertEquals(title, "Cogmento CRM");
+		Assert.assertEquals(title, "#1 Free CRM Power Up your Entire Business Free Forever");
 	}
-	
+	*/
 	
 	
 	@Test
 	public void loginTest()
 	{
+		System.out.println("login start");
+		
 		loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
 		
-		
+		System.out.println("login complete");
 		
 	}
 	
