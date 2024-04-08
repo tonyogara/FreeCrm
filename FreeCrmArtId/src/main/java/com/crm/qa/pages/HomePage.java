@@ -4,17 +4,23 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.TestBase;
 
 public class HomePage extends TestBase {
 	
 	
-	public HomePage(Properties prop) {
+	public HomePage() {
 		super(prop);
-		// TODO Auto-generated constructor stub
-	}
+		PageFactory.initElements(driver, this);
 
+	}
+	
+	
+	
+	
+	
 	@FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]")
 	WebElement companyNameDisplay;
 	
@@ -24,10 +30,9 @@ public class HomePage extends TestBase {
 	
 	
 	//Check if companyNameDisplay element is displayed
-	public boolean checkCompanyNameDisplay()
+	public boolean checkCompanyNameDisplay(String expectedComyNme)
 	{
-		return companyNameDisplay.isDisplayed();
-		
+		return (companyNameDisplay.getText().equalsIgnoreCase(expectedComyNme));
 	}
 
 }

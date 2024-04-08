@@ -50,6 +50,7 @@ public class LoginPageTest extends TestBase{
 		
 		loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
 		
+		
 		System.out.println("login complete");
 		
 	}
