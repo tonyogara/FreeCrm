@@ -1,15 +1,22 @@
 package com.crm.qa.testcases;
 
+import java.io.IOException;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.HomePage;
+import com.crm.qa.pages.LoginPage;
 
 
-HomePage homePage;
 
 public class HomePageTest extends TestBase {
 
+	HomePage homePage = new HomePage();
+	LoginPage loginPage;
+	
 	
 	public HomePageTest()
 	{
@@ -19,20 +26,35 @@ public class HomePageTest extends TestBase {
 	
 	
 	
-	//HomePage homePage;
+	@BeforeMethod
+	public void setUp() throws IOException
+	{
+		super.initialization();
+		loginPage = new LoginPage();
+		
+	}
 	
 	
 	
 	@Test
 	public void companyNameDisplayTest()
 	{
-		System.out.println("companyNameDisplayTest() start");
 		
-		if (homePage.checkCompanyNameDisplay() = true)
-		{	
-			System.out.println("companyNameDisplayTest() worked");
-		}
+		loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
+		
+		
+		
+		homePage.checkCompanyNameDisplay();
+	
+		
 	}
+	
+	@AfterMethod
+	public void teardown()
+	{
+		driver.quit();
+	}
+	
 	
 	
 	
