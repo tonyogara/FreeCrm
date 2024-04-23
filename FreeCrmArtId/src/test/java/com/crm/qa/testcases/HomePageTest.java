@@ -39,12 +39,17 @@ public class HomePageTest extends TestBase {
 	@Test
 	public void companyNameDisplayTest()
 	{
-		
+		//homePage.checkCompanyNameDisplay();
 		loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
 		
 		
-		
-		homePage.checkCompanyNameDisplay();
+		if (homePage.checkCompanyNameDisplay())
+		{
+			System.out.println("True was returned");
+		}
+		else {
+			System.out.println("False was returned");
+		 }
 	
 		
 	}

@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-11T14:48:17 IST" name="Default suite" finished-at="2024-04-11T14:48:31 IST" duration-ms="14302">
+  <suite started-at="2024-04-23T10:20:52 IST" name="Default suite" finished-at="2024-04-23T10:21:05 IST" duration-ms="12634">
     <groups>
     </groups>
-    <test started-at="2024-04-11T14:48:17 IST" name="Default test" finished-at="2024-04-11T14:48:31 IST" duration-ms="14302">
+    <test started-at="2024-04-23T10:20:52 IST" name="Default test" finished-at="2024-04-23T10:21:05 IST" duration-ms="12634">
       <class name="com.crm.qa.testcases.HomePageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.crm.qa.testcases.HomePageTest@1fb669c3]" started-at="2024-04-11T14:48:17 IST" name="setUp" finished-at="2024-04-11T14:48:25 IST" duration-ms="7873" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.crm.qa.testcases.HomePageTest@479460a6]" started-at="2024-04-23T10:20:52 IST" name="setUp" finished-at="2024-04-23T10:20:58 IST" duration-ms="5844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="companyNameDisplayTest()[pri:0, instance:com.crm.qa.testcases.HomePageTest@1fb669c3]" started-at="2024-04-11T14:48:25 IST" name="companyNameDisplayTest" finished-at="2024-04-11T14:48:31 IST" duration-ms="6187" status="PASS">
+        <test-method signature="companyNameDisplayTest()[pri:0, instance:com.crm.qa.testcases.HomePageTest@479460a6]" started-at="2024-04-23T10:20:58 IST" name="companyNameDisplayTest" finished-at="2024-04-23T10:21:04 IST" duration-ms="6600" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- companyNameDisplayTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.crm.qa.testcases.HomePageTest@1fb669c3]" started-at="2024-04-11T14:48:31 IST" name="teardown" finished-at="2024-04-11T14:48:31 IST" duration-ms="184" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.crm.qa.testcases.HomePageTest@479460a6]" started-at="2024-04-23T10:21:04 IST" name="teardown" finished-at="2024-04-23T10:21:05 IST" duration-ms="133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
