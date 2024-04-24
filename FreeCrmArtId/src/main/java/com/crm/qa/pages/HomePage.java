@@ -6,6 +6,7 @@ import java.net.UnknownHostException;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -69,12 +70,18 @@ public class HomePage extends TestBase {
 		
 		
 		System.out.println(comNam1);
-		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
-		
-		
-		
+		try {
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]")));
+		
+		
+		} catch (TimeoutException toe) {
+			
+			String toeMessage = toe.getMessage();
+			System.out.println("Before toe");
+			System.out.println(toeMessage);
+			System.out.println("After toe");
+		}
 		
 		String comNam2 = companyNameDisplay.getText().toString();
 		
