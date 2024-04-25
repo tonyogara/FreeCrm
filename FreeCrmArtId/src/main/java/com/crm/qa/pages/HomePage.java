@@ -42,55 +42,26 @@ public class HomePage extends TestBase {
 	public HomePage() {
 		super(prop);
 		PageFactory.initElements(driver, this);
-
 	}
 	
 	
 	
 	
-	//@FindBy(xpath="//b[contains(text(),'Adelphi')]")
-	//@FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]")
-	//WebElement companyNameDisplay;
-	
-	WebDriverWait wait;
-	
-	
-	
 	//Check if companyNameDisplay element is displayed
-	//public void checkCompanyNameDisplay(String expectedComyNme)
 	public boolean checkCompanyNameDisplay()
-	{
-		
-		System.out.println("Yooooopppeeee!!");
-		
+	{	
 		WebElement companyNameDisplay = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]"));
-		
-		
-		String comNam1 = companyNameDisplay.getText().toString();
-		
-		
-		System.out.println(comNam1);
+
 		try {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]")));
+			} catch (TimeoutException toe) {
+				String toeMessage = toe.getMessage();
+				System.out.println(toeMessage);
+			}
 		
-		
-		} catch (TimeoutException toe) {
-			
-			String toeMessage = toe.getMessage();
-			System.out.println("Before toe");
-			System.out.println(toeMessage);
-			System.out.println("After toe");
-		}
-		
-		String comNam2 = companyNameDisplay.getText().toString();
-		
-		
-		System.out.println(comNam2);
-		System.out.println("Finished!!");
-		
-		//System.out.println(companyNameDisplay.getText());
-		return (comNam2.equalsIgnoreCase("Adelphi"));
+
+		return (companyNameDisplay.getText().toString().equalsIgnoreCase("Adelphi"));
 	}
 
 }

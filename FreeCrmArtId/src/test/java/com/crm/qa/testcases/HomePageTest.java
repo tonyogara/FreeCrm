@@ -20,8 +20,7 @@ public class HomePageTest extends TestBase {
 	
 	public HomePageTest()
 	{
-	super(prop);
-
+		super(prop);
 	}
 	
 	
@@ -30,8 +29,7 @@ public class HomePageTest extends TestBase {
 	public void setUp() throws IOException
 	{
 		super.initialization();
-		loginPage = new LoginPage();
-		
+		loginPage = new LoginPage();	
 	}
 	
 	
@@ -39,19 +37,16 @@ public class HomePageTest extends TestBase {
 	@Test
 	public void companyNameDisplayTest()
 	{
-		//homePage.checkCompanyNameDisplay();
 		loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
-		
-		
+			
 		if (homePage.checkCompanyNameDisplay())
 		{
 			System.out.println("True was returned");
 		}
-		else {
+		else 
+		{
 			System.out.println("False was returned");
-		 }
-	
-		
+		}
 	}
 	
 	@AfterMethod

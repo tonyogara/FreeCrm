@@ -20,13 +20,6 @@ public class LoginPage extends TestBase
 	WebElement emaiLogin;
 	
 	
-	/*
-	//header/div[1]/nav[1]/div[2]/div[1]/div[2]/ul[1]/a[1]
-	
-	@FindBy(xpath = "//div[contains(@class,'gallery_grid_image_caption gallery_grid_image_caption_padding')]")
-	public WebElement yourElement;
-	*/
-	
 	
 	//@FindBy(name="password")
 	@FindBy(xpath ="//body[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/input[1]")
@@ -49,11 +42,6 @@ public class LoginPage extends TestBase
 	
 	
 	
-	
-	//header/div[1]/nav[1]/div[2]/div[1]/div[2]/ul[1]/a[1]
-	//header/div[1]/nav[1]/div[2]/div[1]/div[2]/ul[1]/a[1]
-	
-	
 	//Actions
 	public String validateLoginPageTitle()
 	{
@@ -63,18 +51,12 @@ public class LoginPage extends TestBase
 	
 	
 	public HomePage login(String lgn,String pwd)
-	{
-		System.out.println("In first page");
-		
+	{	
 		firstLoginBtn.click();
-		System.out.println("In login page");
-		
 		emaiLogin.sendKeys(lgn);
 		passwordLogin.sendKeys(pwd);
 		loginBtn.click();
-		
 		return new HomePage();
-		
 	}
 	
 		
