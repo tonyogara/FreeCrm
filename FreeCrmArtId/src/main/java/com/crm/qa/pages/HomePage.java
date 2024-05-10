@@ -1,7 +1,7 @@
 package com.crm.qa.pages;
 
 
-import static org.testng.AssertJUnit.assertTrue;
+//import static org.testng.AssertJUnit.assertTrue;
 import java.net.MalformedURLException;
 import java.net.UnknownHostException;
 import java.time.Duration;
@@ -34,7 +34,6 @@ import com.crm.qa.base.TestBase;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import org.openqa.selenium.support.ui.*;
 public class HomePage extends TestBase {
@@ -54,8 +53,11 @@ public class HomePage extends TestBase {
 		WebElement companyNameDisplay = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]"));
 
 		try {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]")));
+		//WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]")));
+		
+		WebElement element = new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]")));
+		
 			} catch (TimeoutException toe) {
 				String toeMessage = toe.getMessage();
 				System.out.println(toeMessage);

@@ -18,10 +18,10 @@
 #Sample Feature Definition Template
 @tag
 Feature: Title of your feature
-  I want check the company name
+  I want to use this template for my feature file
 
   @tag1
-  Scenario: Title of your scenario
-    Given I want to write a step with precondition
-    When I complete action
-    Then I validate the outcomes
+  Scenario: Check Company Name
+    Given I have just logged on
+    When The home page is displayed
+    Then I am seeing the correct company name

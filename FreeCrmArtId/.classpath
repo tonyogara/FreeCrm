@@ -25,7 +25,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="/Users/tony/.m2/repository/io/cucumber/cucumber-core/6.11.0/cucumber-core-6.11.0.jar" sourcepath="/Users/tony/.m2/repository/io/cucumber/cucumber-core/6.11.0/cucumber-core-6.11.0-sources.jar">
+	<classpathentry exported="true" kind="lib" path="/Users/tony/.m2/repository/io/cucumber/cucumber-core/6.11.0/cucumber-core-6.11.0.jar" sourcepath="/Users/tony/.m2/repository/io/cucumber/cucumber-core/6.11.0/cucumber-core-6.11.0-sources.jar">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="maven.groupId" value="io.cucumber"/>
