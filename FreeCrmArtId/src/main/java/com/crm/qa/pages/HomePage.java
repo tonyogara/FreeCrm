@@ -56,7 +56,7 @@ public class HomePage extends TestBase {
 		//WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]")));
 		
-		WebElement element = new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]")));
+		//WebElement element = new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]")));
 		
 			} catch (TimeoutException toe) {
 				String toeMessage = toe.getMessage();

@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import com.crm.qa.utilities.TestUtil;
 
@@ -45,11 +46,12 @@ public class TestBase {
 			
 		if(browserName.equals("chrome"))
 		{
+			System.setProperty("webdriver.chrome.driver", "/Users/tony/Documents/Learning/FreeCrm/FreeCrmArtId/src/main/java/com/crm/qa/chromedriver/chromedriver");
 			driver = new ChromeDriver();
 		}
-		else if(browserName.equals("firefox"))
-		{
-			driver = new ChromeDriver();
+		else if(browserName.equals("safari"))
+		{		
+			driver = new SafariDriver();
 		}
 		
 		
