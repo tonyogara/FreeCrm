@@ -88,13 +88,7 @@
 <version>4.1.1</version>
 </dependency>
 
-<!-- 
-<dependency>
-<groupId>org.seleniumhq.selenium</groupId>
-<artifactId>selenium-remote-driver</artifactId>
-<version>4.9.1</version>
-</dependency>
--->
+
 
 
 
@@ -102,6 +96,13 @@
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-chrome-driver</artifactId>
+    <version>4.1.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-firefox-driver</artifactId>
     <version>4.1.1</version>
 </dependency>
 

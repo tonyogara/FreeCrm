@@ -46,18 +46,6 @@ public class CheckCompanyName extends TestBase
 		
 		super.initialization();
 		
-		//loginPage.initialization();
-		//loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		
-		
-		//super.initialization();
-		//loginPage = new LoginPage();
-		
-		//loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
-		
-		
-		//super.initialization();
-		//@BeforeMethod
 		
 		/**
 		loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
