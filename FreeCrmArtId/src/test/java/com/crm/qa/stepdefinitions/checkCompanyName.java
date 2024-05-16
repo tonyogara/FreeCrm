@@ -47,10 +47,10 @@ public class CheckCompanyName extends TestBase
 		super.initialization();
 		
 		
-		/**
+	
 		loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
 		System.out.println("login complete");
-		
+		/**
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	    **/

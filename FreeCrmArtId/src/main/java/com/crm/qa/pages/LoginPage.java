@@ -104,9 +104,9 @@ public class LoginPage extends TestBase
 		//System.out.println(acceptBtn.getText());
 		
 		
-		WebElement acceptBtn = driver.findElement(By.xpath("//*[@id='cf_consent-buttons__accept-all']"));
+		// Commented 16/05 - WebElement acceptBtn = driver.findElement(By.xpath("//*[@id='cf_consent-buttons__accept-all']"));
 		//  WebElement acceptBtn = driver.findElement(By.xpath("//*[@id="cf_consent-buttons__accept-all"]"));
-		System.out.println(acceptBtn.getText());
+		//System.out.println(acceptBtn.getText());
 		
 		
 		/**

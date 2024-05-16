@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariOptions;
 
 import com.crm.qa.utilities.TestUtil;
 
@@ -57,8 +58,14 @@ public class TestBase {
 
 			FirefoxOptions options = new FirefoxOptions();
 		    driver = new FirefoxDriver(options);
+		}	
+		else if(browserName.equals("safari"))
+		{	
+			System.setProperty("webdriver.Safari()", "/Library/Apple/System/Library/CoreServices/SafariSupport.bundle/Contents/MacOS/safaridriver/safaridriver");
+		    
+		    SafariOptions options = new SafariOptions();
+	        driver = new SafariDriver(options);
 			
-			//driver = new FirefoxDriver();
 		}
 		
 		
