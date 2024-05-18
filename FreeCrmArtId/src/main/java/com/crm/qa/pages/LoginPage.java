@@ -36,7 +36,7 @@ public class LoginPage extends TestBase
 	WebElement loginBtn;
 	
 	
-	
+					
 	@FindBy(xpath ="//header/div[1]/nav[1]/div[2]/div[1]/div[2]/ul[1]/a[1]")
 	WebElement firstLoginBtn;
 	
@@ -194,8 +194,9 @@ public class LoginPage extends TestBase
 	    **/
 		
 		
-		
+		System.out.println("Before");
 		firstLoginBtn.click();
+		System.out.println("After");
 		emaiLogin.sendKeys(lgn);
 		passwordLogin.sendKeys(pwd);
 		loginBtn.click();
