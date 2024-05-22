@@ -35,8 +35,8 @@ public class LoginPage extends TestBase
 	@FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]")
 	WebElement loginBtn;
 	
-	
-					
+					//header/div[1]/nav[1]/div[2]/div[1]/div[2]/ul[1]/a[1]
+					//header/div[1]/nav[1]/div[2]/div[1]/div[2]/ul[1]/a[1]
 	@FindBy(xpath ="//header/div[1]/nav[1]/div[2]/div[1]/div[2]/ul[1]/a[1]")
 	WebElement firstLoginBtn;
 	
@@ -68,7 +68,9 @@ public class LoginPage extends TestBase
 	//Initializing the Page Object
 	public LoginPage() 
 	{
+		
 		super(prop);
+		
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -87,119 +89,38 @@ public class LoginPage extends TestBase
 	{	
 		
 		
-		//cf_button cf_button--accept
-		//<div class="cf_modal_container"></div>
+		System.out.println("Before firstLoginBtn");
 		
-		/** this works
-		WebElement modalBox = driver.findElement(By.xpath("//div[@class='cf_modal_container']"));
-		System.out.println(modalBox.getText());
-		**/
-		
-		//driver.findElement(By.xpath("//div[@class='cf_modal_container']//button[contains(@class,'cf_button cf_button--accept')]")).click();
-		
-		////button[text()='Some text']
-		
-		//WebElement acceptBtn = driver.findElement(By.xpath("//button[@class='cf_button cf_button--accept']"));
-		//WebElement acceptBtn = driver.findElement(By.xpath("//button[text()='Accept All']"));
-		//System.out.println(acceptBtn.getText());
-		
-		
-		// Commented 16/05 - WebElement acceptBtn = driver.findElement(By.xpath("//*[@id='cf_consent-buttons__accept-all']"));
-		//  WebElement acceptBtn = driver.findElement(By.xpath("//*[@id="cf_consent-buttons__accept-all"]"));
-		//System.out.println(acceptBtn.getText());
-		
-		
-		/**
-		<button class="cf_button cf_button--accept" id="cf_consent-buttons__accept-all">
-	      Accept All
-	    </button>
-		**/
-		
-		
-		//WebElement acceptBtn = driver.findElement(By.id("cf_consent-buttons__accept-all"));
-		//System.out.println(acceptBtn.getText());
-		
-		//*[@id="cf_consent-buttons__accept-all"]
-		
-		
-		//*[@id="cf_consent-buttons__accept-all"]
-		//*[@id="cf_consent-buttons__accept-all"]
-		
-		// /html/body/div[3]//dialog/div[4]/button[1]
-		
-		/**
-		<button class="cf_button cf_button--accept" id="cf_consent-buttons__accept-all">
-	      Accept All
-	    </button>
-		**/
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/nav[1]/div[2]/div[1]/div[2]/ul[1]/a[1]")));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]")));		
+				//WebElement element = new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]")));
 		
 		
 		
-		//button[text()='Some text']
+		System.out.println("After wait");
+		
+		// ------- This one works -- not sure why firstLoginBtn.click(); is not working ----------- 
+		driver.findElement(By.xpath("//header/div[1]/nav[1]/div[2]/div[1]/div[2]/ul[1]/a[1]")).click();
+									
 		
 		
-		//WebElement acceptBtn = driver.findElement(By.xpath("//*[@id=\"cf_consent-buttons__accept-all\"]"));
-		//System.out.println(acceptBtn.getText());
+		//firstLoginBtn.click();
+		//System.out.println("After");
 		
 		
-		//*[@id="cf_consent-buttons__accept-all"]
-		
-		
-		//driver.findElement(By.xpath("//div[@class='modal-footer']//button[contains(@class,'btn-default')]")).click();
-		
-		//cf_consent-buttons__accept-all
-		
-		//WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
-		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/iframe[2]")));
-		
-		
-		//WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]")));
-
-		
-		//System.out.println(acceptAllBtn.getText());
-		
-		//acceptAllBtn.click();
+		driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]")).sendKeys(lgn);
+		//emaiLogin.sendKeys(lgn);
 		
 		
 		
-		/**
-		//Useful stack overflow info on wait
-		//https://stackoverflow.com/questions/12858972/how-can-i-ask-the-selenium-webdriver-to-wait-for-few-seconds-in-java
 		
-		String parent = driver.getWindowHandle();
-		System.out.println("Window handle is : " + parent);
-		
-		// Wait 10 seconds
-		driver.manage().timeouts().wait().;
-		
-		Set < String > s = driver.getWindowHandles();
-
-	    // Now iterate using Iterator
-	    Iterator < String > I1 = s.iterator();
-
-	    while (I1.hasNext()) {
-
-	      String child_window = I1.next();
-
-	      if (!parent.equals(child_window)) {
-	        driver.switchTo().window(child_window);
-
-	        System.out.println(driver.switchTo().window(child_window).getTitle());
-
-	        //driver.close();
-	      }
-
-	    }
-	    **/
+		//passwordLogin.sendKeys(pwd);
+		driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/input[1]")).sendKeys(pwd);
 		
 		
-		System.out.println("Before");
-		firstLoginBtn.click();
-		System.out.println("After");
-		emaiLogin.sendKeys(lgn);
-		passwordLogin.sendKeys(pwd);
-		loginBtn.click();
+		driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]")).click();
+		//loginBtn.click();
 		return new HomePage();
 	}
 	

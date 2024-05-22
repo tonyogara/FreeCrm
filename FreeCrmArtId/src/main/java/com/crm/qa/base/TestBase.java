@@ -13,6 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
+import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.utilities.TestUtil;
 
@@ -52,7 +53,6 @@ public class TestBase {
 		{
 			System.setProperty("webdriver.chrome.driver", "/Users/tony/Documents/Learning/FreeCrm/FreeCrmArtId/src/main/java/com/crm/qa/chromedriver/chromedriver");
 			//driver = new ChromeDriver();
-			
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
 			driver = new ChromeDriver(options);
