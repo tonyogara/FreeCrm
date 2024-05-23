@@ -39,7 +39,7 @@ public class HomePageTest extends TestBase {
 	{
 		loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
 			
-		if (homePage.checkCompanyNameDisplay())
+		if (homePage.checkCompanyNameDisplay("Adelphi"))
 		{
 			System.out.println("True was returned");
 		}
