@@ -7,7 +7,10 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 
+//import junit.framework.Assert;
+import static org.junit.Assert.*;
 
+import org.testng.Assert;
 
 //import com.crm.qa.pages.LoginPage;
 //import com.crm.qa.pages.HomePage;
@@ -38,15 +41,22 @@ public class CheckCompanyName extends TestBase
 
 	@When("^The home page is displayed$")
 	public void the_home_page_is_displayed() throws Throwable {		
+		String title = driver.getTitle();
+		Assert.assertEquals(title, "Cogmento CRM", null);
+		
+		System.out.println(title);
+	
+		
 		System.out.println("In the homepage hopefully..the.not sure what else to put here");
 	}
 
 	@Then("^I am seeing the correct company name$")
 	public void i_am_seeing_the_correct_company_name() throws Throwable {
-		System.out.println("Before homePage.checkCompanyNameDisplay");
-		Boolean checkVal = homePage.checkCompanyNameDisplay("hhhh");
-		System.out.println(checkVal);
-		System.out.println("After homePage.checkCompanyNameDisplay");
+		Boolean checkVal = homePage.checkCompanyNameDisplay("Adelphi");
+	
+		Assert.assertEquals(true, checkVal);
+		driver.close();
+		
 	}
 	
 	
