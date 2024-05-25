@@ -52,7 +52,7 @@ public class TestBase {
 		if(browserName.equals("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver", "/Users/tony/Documents/Learning/FreeCrm/FreeCrmArtId/src/main/java/com/crm/qa/chromedriver/chromedriver");
-			//driver = new ChromeDriver();
+			
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
 			driver = new ChromeDriver(options);
@@ -80,7 +80,7 @@ public class TestBase {
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
-		System.out.println("Completed super.initialization");
+		
 					
 	}
 	

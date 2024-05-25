@@ -6,14 +6,10 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-
-//import junit.framework.Assert;
 import static org.junit.Assert.*;
 
 import org.testng.Assert;
 
-//import com.crm.qa.pages.LoginPage;
-//import com.crm.qa.pages.HomePage;
 import com.crm.qa.base.*;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
@@ -43,11 +39,7 @@ public class CheckCompanyName extends TestBase
 	public void the_home_page_is_displayed() throws Throwable {		
 		String title = driver.getTitle();
 		Assert.assertEquals(title, "Cogmento CRM", null);
-		
-		System.out.println(title);
-	
-		
-		System.out.println("In the homepage hopefully..the.not sure what else to put here");
+
 	}
 
 	@Then("^I am seeing the correct company name$")

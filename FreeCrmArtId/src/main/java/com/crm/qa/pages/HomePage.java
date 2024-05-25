@@ -33,8 +33,7 @@ public class HomePage extends TestBase {
 		WebElement companyNameDisplay = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/b[1]"));
 			
 	
-		System.out.println(companyNameDisplay.getText().toString());
-		System.out.println(expectedCompany);
+		
 	
 		return (companyNameDisplay.getText().toString().equalsIgnoreCase(expectedCompany));
 		
