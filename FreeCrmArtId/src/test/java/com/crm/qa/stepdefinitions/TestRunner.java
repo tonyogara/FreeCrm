@@ -11,8 +11,9 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/java/com/crm/qa/features"
-		,glue={"stepDefinitions"}
-		)
+		,glue={"stepDefinitions"} 
+		,tags = {"Working_On"})
+
 
 public class TestRunner {
 

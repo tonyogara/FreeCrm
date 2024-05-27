@@ -12,6 +12,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.crm.qa.base.TestBase;
 
+
+import com.crm.qa.pages.ContactsPage;
+
 public class HomePage extends TestBase {
 	
 	
@@ -20,8 +23,16 @@ public class HomePage extends TestBase {
 	}
 	
 	
+	public ContactsPage selectContactsPage()
+	{
 	
-	
+		driver.findElement(By.xpath("//body/div[@id='ui']/div[1]/div[1]/div[3]/a[1]/i[1]")).click();
+		
+		return new ContactsPage();
+	}
+			
+			
+			
 	//Check if companyNameDisplay element is displayed
 	public boolean checkCompanyNameDisplay(String expectedCompany)
 	{	
