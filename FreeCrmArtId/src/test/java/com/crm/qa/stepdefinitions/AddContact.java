@@ -50,15 +50,7 @@ public class AddContact extends TestBase {
 	
 	
 	@Then("I can add first name {string} and surname {string}")
-	public void i_can_add_first_name_and_surname(String string1, String string2) {
-	    
-		
-		driver.findElement(By.xpath("//body/div[@id='ui']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/a[1]/button[1]")).click();
-		System.out.println("Adding the first name");
-	    
-	    
-	    System.out.println("Adding the surname name");
-	    
+	public void i_can_add_first_name_and_surname(String string1, String string2) {    
 	    contactsPage.createContact(string1, string2);
 	}
 
