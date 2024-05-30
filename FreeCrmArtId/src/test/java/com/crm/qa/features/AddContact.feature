@@ -23,8 +23,11 @@ Feature: Title of your feature
 
   @Working_On
   Scenario Outline: Successfully add contacts
+    # Prerequisite
     Given I am on the login page
+    #Step(s)
     When I am on the contacts page
+    #Results
     Then I can add first name "<firstname>" and surname "<surname>"
 
     Examples: 

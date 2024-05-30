@@ -32,7 +32,7 @@ public class AddContact extends TestBase {
 	@Given("I am on the login page")
 	public void i_am_on_the_login_page() {
 		super.initialization();
-		loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
+		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
 	

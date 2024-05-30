@@ -1,4 +1,4 @@
-#Author: your.email@your.domain.com
+#Author: tony.ogara@
 #Keywords Summary :
 #Feature: List of scenarios.
 #Scenario: Business rule through list of steps with arguments.
@@ -16,21 +16,14 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@Working_On
-Feature: Title of your feature
+@tag
+Feature: Add a Contact and search for a Contact
   I want to use this template for my feature file
 
-
-  @Working_On
-  Scenario Outline: Successfully add contacts
-    # Prerequisite
-    Given I am on the login page
-    #Step(s)
-    When I am on the contacts page
-    #Results
-    Then I can add first name "<firstname>" and surname "<surname>"
-
-    Examples: 
-      | firstname 	| surname	|
-      | Adam	 			| Ant			|
-      | Bob					| Brown	 	|
+  #@Working_On
+  Scenario: Add a Contact and search for a Contact
+    Given I am on the Contacts page
+    When I select the Create button
+    And Enter the First Name and Last Name 
+    And Save the contact details 
+    Then searching for the First name and Last Name returns the contact successfully
