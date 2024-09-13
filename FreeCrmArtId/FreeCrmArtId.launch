@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="cucumber.eclipse.launching.localCucumberFeature">
+    <stringAttribute key="cucumber feature" value="/Users/tony/Documents/Learning/FreeCrm/FreeCrmArtId/src/test/java/com/crm/qa/features"/>
+    <stringAttribute key="glue path" value="/Users/tony/Documents/Learning/FreeCrm/FreeCrmArtId/src/test/java/com/crm/qa/stepdefinitions"/>
+    <booleanAttribute key="is html formatter?" value="true"/>
+    <booleanAttribute key="is json formatter?" value="false"/>
+    <booleanAttribute key="is junit formatter" value="true"/>
+    <booleanAttribute key="is monochrome?" value="false"/>
+    <booleanAttribute key="is pretty formatter?" value="false"/>
+    <booleanAttribute key="is progress formatter?" value="true"/>
+    <booleanAttribute key="is rerun formatter" value="false"/>
+    <booleanAttribute key="is usage formatter" value="false"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/FreeCrmArtId"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="4"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+        <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+        <listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="FreeCrmArtId"/>
+</launchConfiguration>

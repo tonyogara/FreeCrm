@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 import org.openqa.selenium.support.PageFactory;
@@ -53,9 +54,20 @@ public class TestBase {
 		{
 			System.setProperty("webdriver.chrome.driver", "/Users/tony/Documents/Learning/FreeCrm/FreeCrmArtId/src/main/java/com/crm/qa/chromedriver/chromedriver");
 			
+			
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
 			driver = new ChromeDriver(options);
+			
+			/*
+			WebDriver driver = new ChromeDriver();
+			Actions actions = new Actions(driver);
+
+			WebElement element = driver.findElement(By.id("elementId"));
+			actions.moveToElement(element).click().build().perform();
+			
+			*/
+			
 			
 		}
 		else if(browserName.equals("firefox"))

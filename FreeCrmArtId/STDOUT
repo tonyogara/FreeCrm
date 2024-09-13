@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="4" tests="4" time="0.005683">
+    <testcase classname="Add a Contact and search for a Contact" name="Add a Contact and search for a Contact" time="0.002386">
+        <skipped>
+            <![CDATA[Given I am on the Contacts page.............................................undefined
+When I select the Create button.............................................undefined
+And Enter the First Name and Last Name......................................undefined
+And Save the contact details................................................undefined
+Then searching for the First name and Last Name returns the contact successfully.undefined
+]]>
+        </skipped>
+    </testcase>
+    <testcase classname="Title of your feature" name="Successfully add contacts" time="0.002477">
+        <skipped>
+            <![CDATA[Given I am on the login page................................................undefined
+When I am on the contacts page..............................................undefined
+Then I can add first name "Adam" and surname "Ant"..........................undefined
+]]>
+        </skipped>
+    </testcase>
+    <testcase classname="Title of your feature" name="Successfully add contacts 2" time="0.000441">
+        <skipped>
+            <![CDATA[Given I am on the login page................................................undefined
+When I am on the contacts page..............................................undefined
+Then I can add first name "Bob" and surname "Brown".........................undefined
+]]>
+        </skipped>
+    </testcase>
+    <testcase classname="Title of your feature" name="Check Company Name" time="0.000379">
+        <skipped>
+            <![CDATA[Given I have just logged on.................................................undefined
+When The home page is displayed.............................................undefined
+Then I am seeing the correct company name...................................undefined
+]]>
+        </skipped>
+    </testcase>
+</testsuite>

@@ -11,9 +11,9 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/java/com/crm/qa/features"
-		,glue={"stepDefinitions"} 
-		,tags = {"Working_On"})
-
+		,glue={"stepdefinitions"} 
+		//,glue={"src/test/java/com/crm/qa/stepdefinitions"}
+		,plugin = {"pretty","json:target/json/report.json"})
 
 public class TestRunner {
 

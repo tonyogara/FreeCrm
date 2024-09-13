@@ -16,11 +16,10 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
 Feature: Title of your feature
   I want to use this template for my feature file
 
-  @tag1
+  
   Scenario: Check Company Name
     Given I have just logged on
     When The home page is displayed

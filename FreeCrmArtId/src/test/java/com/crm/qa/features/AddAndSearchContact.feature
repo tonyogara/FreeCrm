@@ -15,12 +15,11 @@
 #<> (placeholder)
 #""
 ## (Comments)
-#Sample Feature Definition Template
-@tag
+#Sample Feature Definition Templateß
 Feature: Add a Contact and search for a Contact
   I want to use this template for my feature file
 
-  #@Working_On
+  
   Scenario: Add a Contact and search for a Contact
     Given I am on the Contacts page
     When I select the Create button
