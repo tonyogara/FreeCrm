@@ -64,6 +64,8 @@ public class AddContact extends TestBase {
 		
 		contactsPage.createContact(string1, string2);
 		
+		driver.close();
+		
 	}
 
 	
