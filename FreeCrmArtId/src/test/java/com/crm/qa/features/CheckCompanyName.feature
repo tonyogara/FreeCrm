@@ -19,7 +19,7 @@
 Feature: Title of your feature
   I want to use this template for my feature file
 
-  
+  #Background: Signal that I am starting the first scenario
   Scenario: Check Company Name
     Given I have just logged on
     When The home page is displayed

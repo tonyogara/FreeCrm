@@ -48,7 +48,12 @@ public class LoginPageTest extends TestBase{
 	{
 		System.out.println("login start");
 		
-		loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
+		try {
+			loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 		System.out.println("login complete");

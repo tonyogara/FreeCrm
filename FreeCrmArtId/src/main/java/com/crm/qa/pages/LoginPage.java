@@ -1,11 +1,20 @@
 package com.crm.qa.pages;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByName;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.crm.qa.base.TestBase;
 
 public class LoginPage extends TestBase
 {
-	
+	WebElement activeElementIdentified = null;
 	public LoginPage() 
 	{
 		super(prop);
@@ -19,14 +28,13 @@ public class LoginPage extends TestBase
 	}
 	
 	
-	public HomePage login(String lgn,String pwd)
+	public HomePage login(String lgn,String pwd) throws IOException
 	{	
 		
-		driver.findElement(By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/nav[1]/div[2]/div[1]/a[1]/span[1]")).click();		
-		driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]")).sendKeys(lgn);
-		driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/input[1]")).sendKeys(pwd);
-		driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]")).click();
 		
+		driver.findElement(By.name("email")).sendKeys(lgn);
+		driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/input[1]")).sendKeys(pwd);
+		driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]")).click();
 		
 		return new HomePage();
 	}

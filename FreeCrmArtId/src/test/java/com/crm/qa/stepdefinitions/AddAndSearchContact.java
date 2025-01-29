@@ -1,5 +1,7 @@
 package com.crm.qa.stepdefinitions;
 
+import java.io.IOException;
+
 import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -35,10 +37,13 @@ public class AddAndSearchContact extends TestBase{
 	@Given("I am on the Contacts page")
 	public void i_am_on_the_Contacts_page() {
 	  super.initialization();  
-	  loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-	  //contactsPage = homePage.selectContactsPage();
-	  System.out.println("Done one");
-	  //throw new cucumber.api.PendingException();
+	  try {
+		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	  
 	    
 	}
 

@@ -37,7 +37,12 @@ public class HomePageTest extends TestBase {
 	@Test
 	public void companyNameDisplayTest()
 	{
-		loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
+		try {
+			loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 			
 		if (homePage.checkCompanyNameDisplay("Adelphi"))
 		{

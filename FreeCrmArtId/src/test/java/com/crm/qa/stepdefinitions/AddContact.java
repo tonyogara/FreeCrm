@@ -6,6 +6,8 @@ import cucumber.api.java.en.When;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
@@ -34,7 +36,12 @@ public class AddContact extends TestBase {
 		super.initialization();
 		System.out.println("in i_am_on_the_login_page()");
 		
-		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		try {
+			loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 

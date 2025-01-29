@@ -8,6 +8,7 @@ import cucumber.api.java.en.When;
 
 import static org.junit.Assert.*;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 
 import com.crm.qa.base.*;
@@ -32,7 +33,8 @@ public class CheckCompanyName extends TestBase
 	@Given("^I have just logged on$")
 	public void i_have_just_logged_on() throws Throwable {
 		super.initialization();
-		loginPage.login(prop.getProperty("uesername"), prop.getProperty("password"));		
+		String user = prop.getProperty("username");
+		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));		
 	}
 
 	@When("^The home page is displayed$")
@@ -44,8 +46,9 @@ public class CheckCompanyName extends TestBase
 
 	@Then("^I am seeing the correct company name$")
 	public void i_am_seeing_the_correct_company_name() throws Throwable {
+		
 		Boolean checkVal = homePage.checkCompanyNameDisplay("Adelphi");
-	
+		
 		Assert.assertEquals(true, checkVal);
 		driver.close();
 		
