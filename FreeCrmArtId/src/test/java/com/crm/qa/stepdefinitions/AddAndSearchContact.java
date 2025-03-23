@@ -39,6 +39,7 @@ public class AddAndSearchContact extends TestBase{
 	  super.initialization();  
 	  try {
 		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		//Check you are on the Contacts page
 	} catch (IOException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

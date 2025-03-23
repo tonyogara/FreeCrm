@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>WeatherAPI_Grp_Id</groupId>
+  <artifactId>WeatherAPI_Art_Id</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>WeatherAPI_Art_Id</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    
+    <maven.compiler.source>12</maven.compiler.source>  <!-- Change to 8, 11, or 17 -->
+    <maven.compiler.target>12</maven.compiler.target>
+  </properties>
+
+
+ <!-- Spring Boot Parent for dependency management -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.2</version>  <!-- Ensure you're using the latest stable version -->
+        <relativePath/>
+    </parent>
+
+
+  <dependencies>
+    <!-- Spring Boot WebFlux (for WebClient, Reactive Programming) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-webflux</artifactId>
+    </dependency>
+
+    <!-- (Optional) Spring Boot Web for traditional MVC applications -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+   
+</dependencies>
+
+</project>
